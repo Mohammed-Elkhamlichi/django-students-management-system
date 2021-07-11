@@ -6,16 +6,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
-
         <title>Document</title>
     </head>
     <body>
         <h1>Test From Django By {{dev}}</h1>
         <form method="POST">
             {% csrf_token %}
-            <input type="text" name="first_name" id="" placeholder="first name">
+            {{form.as_p}}
+            <!-- <input type="text" name="first_name" id="" placeholder="first name">
             <input type="text" name="last_name" id="" placeholder="last name">
-            <input type="email" name="email" id="" placeholder="email">
+            <input type="email" name="email" id="" placeholder="email"> -->
             <button>login</button>
         </form>
     </body>
